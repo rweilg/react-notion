@@ -18,6 +18,7 @@ import PageHeader from "./components/page-header";
 import { classNames, getTextContent, getListNumber } from "./utils";
 
 export const createRenderChildText = (
+  /* comment  */
   customDecoratorComponents?: CustomDecoratorComponents
 ) => (properties: DecorationType[]) => {
   return properties?.map(([text, decorations], i) => {
