@@ -144,7 +144,7 @@ export const Block: React.FC<Block> = props => {
               </div>
             );
           } else {
-            return <main className="notion">{children}</main>;
+            return <main>{children}</main>;
           }
         } else {
           if (!blockValue.properties) return null;
