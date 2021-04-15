@@ -144,7 +144,7 @@ export const Block: React.FC<Block> = props => {
               </div>
             );
           } else {
-            return <main>{children}</main>;
+            return <>{children}</>;
           }
         } else {
           if (!blockValue.properties) return null;
