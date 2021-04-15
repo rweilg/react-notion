@@ -211,7 +211,7 @@ export const Block: React.FC<Block> = props => {
       case "header":
         if (!blockValue.properties) return null;
         return (
-          <h1 className="notion-h1">
+          <h1 className={header1style}>
             {renderChildText(blockValue.properties.title)}
           </h1>
         );
@@ -235,14 +235,8 @@ export const Block: React.FC<Block> = props => {
         if (!blockValue.properties) {
           return <div className={paragraphStyle}>&nbsp;</div>;
         }
-        const blockColor = blockValue.format?.block_color;
         return (
-          <p
-            className={classNames(
-              `notion-text`,
-              blockColor && `notion-${blockColor}`
-            )}
-          >
+          <p className={paragraphStyle}>
             {renderChildText(blockValue.properties.title)}
           </p>
         );

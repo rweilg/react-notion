@@ -57,10 +57,10 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
       mapPageUrl={mapPageUrl}
       mapImageUrl={mapImageUrl}
       {...props}
-      header1style=""
-      header2style=""
-      header3style=""
-      paragraphStyle=""
+      header1style={header1style}
+      header2style={header2style}
+      header3style={header3style}
+      paragraphStyle={paragraphStyle}
     >
       {currentBlock?.value?.content?.map(contentId => (
         <NotionRenderer
@@ -69,10 +69,10 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
           level={level + 1}
           mapPageUrl={mapPageUrl}
           mapImageUrl={mapImageUrl}
-          header1style=""
-          header2style=""
-          header3style=""
-          paragraphStyle=""
+          header1style={header1style}
+          header2style={header2style}
+          header3style={header3style}
+          paragraphStyle={paragraphStyle}
           {...props}
         />
       ))}
