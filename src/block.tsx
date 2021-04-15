@@ -134,42 +134,9 @@ export const Block: React.FC<Block> = props => {
               return null;
             }
 
-            const { page_icon, page_cover, page_cover_position } =
-              blockValue.format || {};
-
-            const coverPosition = (1 - (page_cover_position || 0.5)) * 100;
-
             return (
               <div>
-                {!hideHeader && (
-                  <PageHeader
-                    blockMap={blockMap}
-                    mapPageUrl={mapPageUrl}
-                    mapImageUrl={mapImageUrl}
-                  />
-                )}
-                {page_cover && (
-                  <img
-                    src={mapImageUrl(page_cover, block)}
-                    alt={getTextContent(blockValue.properties.title)}
-                    className="notion-page-cover"
-                    style={{
-                      objectPosition: `center ${coverPosition}%`
-                    }}
-                  />
-                )}
                 <main>
-                  {page_icon && (
-                    <PageIcon
-                      className={
-                        page_cover ? "notion-page-icon-offset" : undefined
-                      }
-                      block={block}
-                      big
-                      mapImageUrl={mapImageUrl}
-                    />
-                  )}
-
                   <div className="notion-title">
                     {renderChildText(blockValue.properties.title)}
                   </div>
