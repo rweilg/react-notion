@@ -15,8 +15,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "postinstall": "tsc --outDir ./build"
+    "prepare": "tsdx build"
   },
   "author": {
     "name": "Tobias Lins",
