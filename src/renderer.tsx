@@ -20,6 +20,11 @@ export interface NotionRendererProps {
   level?: number;
   customBlockComponents?: CustomBlockComponents;
   customDecoratorComponents?: CustomDecoratorComponents;
+
+  header1style: any;
+  header2style: any;
+  header3style: any;
+  paragraphStyle: any;
 }
 
 export const NotionRenderer: React.FC<NotionRendererProps> = ({
@@ -27,6 +32,10 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
   currentId,
   mapPageUrl = defaultMapPageUrl,
   mapImageUrl = defaultMapImageUrl,
+  header1style,
+  header2style,
+  header3style,
+  paragraphStyle,
   ...props
 }) => {
   const { blockMap } = props;
@@ -56,6 +65,10 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
           level={level + 1}
           mapPageUrl={mapPageUrl}
           mapImageUrl={mapImageUrl}
+          header1style=""
+          header2style=""
+          header3style=""
+          paragraphStyle=""
           {...props}
         />
       ))}

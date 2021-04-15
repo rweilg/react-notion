@@ -97,6 +97,11 @@ interface Block {
   hideHeader?: boolean;
   customBlockComponents?: CustomBlockComponents;
   customDecoratorComponents?: CustomDecoratorComponents;
+
+  header1style: any;
+  header2style: any;
+  header3style: any;
+  paragraphStyle: any;
 }
 
 export const Block: React.FC<Block> = props => {
@@ -110,7 +115,11 @@ export const Block: React.FC<Block> = props => {
     mapPageUrl,
     mapImageUrl,
     customBlockComponents,
-    customDecoratorComponents
+    customDecoratorComponents,
+    header1style,
+    header2style,
+    header3style,
+    paragraphStyle
   } = props;
   const blockValue = block?.value;
 
@@ -209,14 +218,14 @@ export const Block: React.FC<Block> = props => {
       case "sub_header":
         if (!blockValue.properties) return null;
         return (
-          <h2 className="notion-h2">
+          <h2 className={header2style}>
             {renderChildText(blockValue.properties.title)}
           </h2>
         );
       case "sub_sub_header":
         if (!blockValue.properties) return null;
         return (
-          <h3 className="notion-h3">
+          <h3 className={header3style}>
             {renderChildText(blockValue.properties.title)}
           </h3>
         );
