@@ -134,18 +134,13 @@ export const Block: React.FC<Block> = props => {
               return null;
             }
 
-            const {
-              page_icon,
-              page_cover,
-              page_cover_position,
-              page_full_width,
-              page_small_text
-            } = blockValue.format || {};
+            const { page_icon, page_cover, page_cover_position } =
+              blockValue.format || {};
 
             const coverPosition = (1 - (page_cover_position || 0.5)) * 100;
 
             return (
-              <div className="notion">
+              <div>
                 {!hideHeader && (
                   <PageHeader
                     blockMap={blockMap}
@@ -163,14 +158,7 @@ export const Block: React.FC<Block> = props => {
                     }}
                   />
                 )}
-                <main
-                  className={classNames(
-                    "notion-page",
-                    !page_cover && "notion-page-offset",
-                    page_full_width && "notion-full-width",
-                    page_small_text && "notion-small-text"
-                  )}
-                >
+                <main>
                   {page_icon && (
                     <PageIcon
                       className={
