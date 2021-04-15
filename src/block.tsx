@@ -14,7 +14,6 @@ import {
 import Asset from "./components/asset";
 import Code from "./components/code";
 import PageIcon from "./components/page-icon";
-import PageHeader from "./components/page-header";
 import { classNames, getTextContent, getListNumber } from "./utils";
 
 /* something else */
@@ -110,7 +109,6 @@ export const Block: React.FC<Block> = props => {
     children,
     level,
     fullPage,
-    hideHeader,
     blockMap,
     mapPageUrl,
     mapImageUrl,
