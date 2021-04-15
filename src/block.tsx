@@ -233,7 +233,7 @@ export const Block: React.FC<Block> = props => {
         return <hr className="notion-hr" />;
       case "text":
         if (!blockValue.properties) {
-          return <div className="notion-blank">&nbsp;</div>;
+          return <div className={paragraphStyle}>&nbsp;</div>;
         }
         const blockColor = blockValue.format?.block_color;
         return (
