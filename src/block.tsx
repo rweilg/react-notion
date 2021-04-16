@@ -138,7 +138,6 @@ export const Block: React.FC<Block> = props => {
                   <div className="notion-title">
                     {renderChildText(blockValue.properties.title)}
                   </div>
-
                   {children}
                 </main>
               </div>
