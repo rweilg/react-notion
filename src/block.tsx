@@ -101,6 +101,7 @@ interface Block {
   header2style: any;
   header3style: any;
   paragraphStyle: any;
+  assetStyle: any;
 }
 
 export const Block: React.FC<Block> = props => {
@@ -117,7 +118,8 @@ export const Block: React.FC<Block> = props => {
     header1style,
     header2style,
     header3style,
-    paragraphStyle
+    paragraphStyle,
+    assetStyle
   } = props;
   const blockValue = block?.value;
 
@@ -233,14 +235,7 @@ export const Block: React.FC<Block> = props => {
         const value = block.value as ContentValueType;
 
         return (
-          <figure
-            className="notion-asset-wrapper"
-            style={
-              value.format !== undefined
-                ? { width: value.format.block_width }
-                : undefined
-            }
-          >
+          <figure className={assetStyle}>
             <Asset block={block} mapImageUrl={mapImageUrl} />
 
             {value.properties.caption && (
