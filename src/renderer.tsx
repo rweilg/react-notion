@@ -25,6 +25,7 @@ export interface NotionRendererProps {
   header2style: any;
   header3style: any;
   paragraphStyle: any;
+  assetStyle: any;
 }
 
 export const NotionRenderer: React.FC<NotionRendererProps> = ({
@@ -36,6 +37,7 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
   header2style,
   header3style,
   paragraphStyle,
+  assetStyle,
   ...props
 }) => {
   const { blockMap } = props;
@@ -61,6 +63,7 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
       header2style={header2style}
       header3style={header3style}
       paragraphStyle={paragraphStyle}
+      assetStyle={assetStyle}
     >
       {currentBlock?.value?.content?.map(contentId => (
         <NotionRenderer
@@ -73,6 +76,7 @@ export const NotionRenderer: React.FC<NotionRendererProps> = ({
           header2style={header2style}
           header3style={header3style}
           paragraphStyle={paragraphStyle}
+          assetStyle={assetStyle}
           {...props}
         />
       ))}
