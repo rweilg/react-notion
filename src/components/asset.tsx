@@ -49,14 +49,12 @@ const Asset: React.FC<{
 
     if (block_aspect_ratio) {
       return (
-        <div>
-          <img
+           <img
             className={assetStyleClass}
             alt={caption || "notion image"}
             src={src}
           />
-        </div>
-      );
+       );
     } else {
       return <img alt={caption} src={src} />;
     }

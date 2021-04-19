@@ -235,7 +235,7 @@ export const Block: React.FC<Block> = props => {
         const value = block.value as ContentValueType;
 
         return (
-          <figure className={assetStyle}>
+          <figure>
             <Asset
               block={block}
               mapImageUrl={mapImageUrl}
