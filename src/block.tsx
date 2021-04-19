@@ -235,18 +235,17 @@ export const Block: React.FC<Block> = props => {
         const value = block.value as ContentValueType;
 
         return (
-          <figure>
-            <Asset
+             <Asset
               block={block}
               mapImageUrl={mapImageUrl}
               assetStyleClass={assetStyle}
-            />
+            >
             {value.properties.caption && (
               <figcaption className="notion-image-caption">
                 {renderChildText(value.properties.caption)}
               </figcaption>
             )}
-          </figure>
+            </Asset>
         );
       case "code": {
         if (blockValue.properties.title) {
