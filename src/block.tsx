@@ -236,8 +236,11 @@ export const Block: React.FC<Block> = props => {
 
         return (
           <figure className={assetStyle}>
-            <Asset block={block} mapImageUrl={mapImageUrl} />
-
+            <Asset
+              block={block}
+              mapImageUrl={mapImageUrl}
+              assetStyleClass={assetStyle}
+            />
             {value.properties.caption && (
               <figcaption className="notion-image-caption">
                 {renderChildText(value.properties.caption)}

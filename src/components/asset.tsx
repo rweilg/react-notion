@@ -6,7 +6,8 @@ const types = ["video", "image", "embed", "figma"];
 const Asset: React.FC<{
   block: BlockType;
   mapImageUrl: MapImageUrl;
-}> = ({ block, mapImageUrl }) => {
+  assetStyleClass?: any;
+}> = ({ block, mapImageUrl, assetStyleClass }) => {
   const value = block.value as ContentValueType;
   const type = block.value.type;
 
@@ -50,7 +51,7 @@ const Asset: React.FC<{
       return (
         <div>
           <img
-            className="notion-image-inset"
+            className={assetStyleClass}
             alt={caption || "notion image"}
             src={src}
           />
