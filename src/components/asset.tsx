@@ -48,12 +48,7 @@ const Asset: React.FC<{
 
     if (block_aspect_ratio) {
       return (
-        <div
-          style={{
-            paddingBottom: `${aspectRatio * 100}%`,
-            position: "relative"
-          }}
-        >
+        <div>
           <img
             className="notion-image-inset"
             alt={caption || "notion image"}
