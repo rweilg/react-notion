@@ -7,6 +7,11 @@
     "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 .notion > *,
 .notion-page > *,
 .notion-column > * {
